@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { FC, useState } from "react"
+import Token from "./tokens/Token"
+import { scrabble } from '@mrprim/tile-bag'
 
-const App = () => {
-  const [count, setCount] = useState(0)
+const bag = scrabble();
+
+const App: FC = () => {
+  const [state, setState] = useState<string[]>([]);
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-tan text-black flex items-center justify-between flex-col">
+      <Token type="letter" value="+" onClick={() => {
+        const drawn = bag.drawOne();
+
+        setState((s) => [...s, drawn].filter(x => !!x))
+      }} />
+      <div className="flex row flex-wrap gap-2 justify-center">
+        {state.map((s, i) => <Token key={i} type='scrabble' value={s} />)}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 

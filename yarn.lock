@@ -429,10 +429,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mrprim/tile-bag@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.npmjs.org/@mrprim/tile-bag/-/tile-bag-1.0.12.tgz#3a4d89661d7f808fdf7a65550d191c07d775ebdf"
-  integrity sha512-Fgp6lCzub4Wnq7/QTyOrh7VeOEMxnSgsGz29eu2G5wptTCsiSh1RvgY1OXOlTeGj91Q7cZJ9eDsUN+ixuMimvw==
+"@mrprim/tile-bag@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@mrprim/tile-bag/-/tile-bag-2.0.1.tgz#fc2b48bb45bfe9187a0530cabc4256b508382495"
+  integrity sha512-iJ97kSLp8o6qsLlcvac58cuoWpl13t0n509+ZL9qhUIeFAp6znFrLp7a7IE5OeqRX1MwkiUKHDBrh58QuQQnfw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
